@@ -1,4 +1,4 @@
-import { createInMemoryUserRepository } from "../tests/ports/in-memory-user-repository";
+import { createInMemoryUserRepository } from "./in-memory-user-repository";
 import { registerUser } from "./register-user.use-case";
 
 describe('Register User - Use case', () => {

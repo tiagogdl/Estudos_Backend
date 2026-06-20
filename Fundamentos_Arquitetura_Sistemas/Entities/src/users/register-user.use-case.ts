@@ -1,4 +1,4 @@
-import { createUser } from "../entities/user.entity";
+import { createUser } from "./user.entity";
 import { UserRepository } from "../ports/user-repository";
 
 type RegisterUserInput = {

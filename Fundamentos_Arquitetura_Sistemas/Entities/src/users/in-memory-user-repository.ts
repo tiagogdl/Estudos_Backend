@@ -1,4 +1,4 @@
-import { User } from "../../entities/user.entity"
+import { User } from "./user.entity"
 import { UserRepository } from "../../ports/user-repository";
 
 export const createInMemoryUserRepository = (initialUsers: User[] = []): UserRepository => {
