@@ -1,0 +1,16 @@
+{
+  "name": "node",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "Tiago Dias",
+  "type": "commonjs",
+  "main": "teste.js",
+  "scripts": {
+    "start": "ts-node ./src/teste.ts"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "^6.0.3"
+  }
+}
