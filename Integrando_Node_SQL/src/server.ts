@@ -1,6 +1,9 @@
-import express from 'express';
+import express from 'express'; 
+import { mainRouter } from './routes/main.js';
 
 const server = express();
+
+server.use(mainRouter)
 
 server.get('/', (req, res) => {
     res.send('Olá Mundo!')
