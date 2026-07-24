@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { createUser, createUsers, getAllUsers, getUserByEmail } from "../services/user.js";
+import { createUser, createUsers, deleteUser, getAllUsers, getUserByEmail, updateUser } from "../services/user.js";
 import { count } from "node:console";
 
 
@@ -13,14 +13,8 @@ mainRouter.post('/user', async (req, res) => {
     // Validar os dados recebidos
 
     const user = await createUser({
-        name: 'Leon',
-        email: 'leon@delas.com',
-        posts: {
-            create: {
-                title: 'Título de Teste do Leon', 
-                body: 'Corpo de Teste'
-            }
-        }
+        name: 'Testador 1',
+        email: 'teste2@teste.com',
     });
     res.status(201).json({ user });
 
@@ -43,5 +37,15 @@ mainRouter.get('/users', async (req, res) => {
 
 mainRouter.get('/user', async (req, res) => {
     const result = await getUserByEmail('tiagodiasgdl474@gmail.com')
+    res.json({ result })
+})
+
+mainRouter.put('/user', async (req, res) => {
+    const result = await updateUser()
+    res.json({ result })
+})
+
+mainRouter.delete('/user', async (req, res) => {
+    const result = await deleteUser()
     res.json({ result })
 })
